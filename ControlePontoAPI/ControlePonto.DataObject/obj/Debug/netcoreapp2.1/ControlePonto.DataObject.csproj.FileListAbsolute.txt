@@ -1,0 +1,9 @@
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.deps.json
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.csproj.CoreCompileInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.AssemblyInfoInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.AssemblyInfo.cs
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/Debug/netcoreapp2.1/ControlePonto.DataObject.csprojAssemblyReference.cache

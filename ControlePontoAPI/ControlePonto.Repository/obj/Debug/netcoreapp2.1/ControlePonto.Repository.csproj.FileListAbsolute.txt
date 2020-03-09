@@ -1,0 +1,12 @@
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/bin/Debug/netcoreapp2.1/ControlePonto.Repository.deps.json
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/bin/Debug/netcoreapp2.1/ControlePonto.Repository.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/bin/Debug/netcoreapp2.1/ControlePonto.Repository.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.csprojAssemblyReference.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.csproj.CoreCompileInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.AssemblyInfoInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.AssemblyInfo.cs
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.csproj.CopyComplete
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/Debug/netcoreapp2.1/ControlePonto.Repository.pdb

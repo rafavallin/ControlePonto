@@ -1,0 +1,14 @@
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.Business.deps.json
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.Business.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.Business.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.Repository.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.DataObject.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/bin/Debug/netcoreapp2.1/ControlePonto.Repository.pdb
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.csprojAssemblyReference.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.csproj.CoreCompileInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.AssemblyInfoInputs.cache
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.AssemblyInfo.cs
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.csproj.CopyComplete
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.dll
+/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/Debug/netcoreapp2.1/ControlePonto.Business.pdb

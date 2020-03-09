@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControlePonto.Business\ControlePonto.Business.csproj" />
+    <ProjectReference Include="..\ControlePonto.DataObject\ControlePonto.DataObject.csproj" />
+    <ProjectReference Include="..\ControlePonto.Repository\ControlePonto.Repository.csproj" />
+  </ItemGroup>
+</Project>
