@@ -1,0 +1,247 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Api/ControlePonto.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Api/ControlePonto.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Api/ControlePonto.Api.csproj",
+        "projectName": "ControlePonto.Api",
+        "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Api/ControlePonto.Api.csproj",
+        "packagesPath": "/Users/rvallin/.nuget/packages/",
+        "outputPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Api/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/rvallin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/ControlePonto.Business.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/ControlePonto.Business.csproj"
+              },
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj"
+              },
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/ControlePonto.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/ControlePonto.Business.csproj",
+        "projectName": "ControlePonto.Business",
+        "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/ControlePonto.Business.csproj",
+        "packagesPath": "/Users/rvallin/.nuget/packages/",
+        "outputPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Business/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/rvallin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj"
+              },
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj",
+        "projectName": "ControlePonto.DataObject",
+        "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj",
+        "packagesPath": "/Users/rvallin/.nuget/packages/",
+        "outputPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/rvallin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj",
+        "projectName": "ControlePonto.Repository",
+        "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/ControlePonto.Repository.csproj",
+        "packagesPath": "/Users/rvallin/.nuget/packages/",
+        "outputPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/rvallin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj": {
+                "projectPath": "/Users/rvallin/Documents/GitHub/ControlePontoAPI/ControlePonto.DataObject/ControlePonto.DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
