@@ -1,0 +1,122 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Avatar'" class="mb-0" [tcShape]="'6px 6px 0 0 '">
+          <tc-avatar [src]="'assets/content/avatar-1.jpg'" [initials]="'JD'"></tc-avatar>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+          <pre><code [highlight]="demoCode"></code></pre>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Initials'">
+          <div class="elem-list">
+            <tc-avatar [tcColor]="'#fff'" [initials]="'AI'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [initials]="'GF'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [initials]="'JP'"></tc-avatar>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Custom size'">
+          <div class="elem-list">
+            <tc-avatar [size]="76" [src]="'assets/content/user-76-2.jpg'"></tc-avatar>
+            <tc-avatar [size]="76" [src]="'assets/content/user-76-3.jpg'"></tc-avatar>
+            <tc-avatar [size]="76" [initials]="'AJ'"></tc-avatar>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Loading avatars'">
+          <div class="elem-list">
+            <tc-avatar [loading]="true"></tc-avatar>
+            <tc-avatar [loading]="true"></tc-avatar>
+            <tc-avatar [loading]="true"></tc-avatar>
+            <tc-avatar [loading]="true"></tc-avatar>
+            <tc-avatar [loading]="true"></tc-avatar>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Avatar shapes'" class="mb-md-0">
+          <div class="elem-list">
+            <tc-avatar [initials]="'RD'" [tcShape]="20"></tc-avatar>
+            <tc-avatar [initials]="'DT'" [tcShape]="15"></tc-avatar>
+            <tc-avatar [initials]="'JL'" [tcShape]="10"></tc-avatar>
+            <tc-avatar [initials]="'NA'" [tcShape]="5"></tc-avatar>
+            <tc-avatar [initials]="'QL'" [tcShape]="0"></tc-avatar>
+          </div>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Avatar group'" class="mb-0" [tcShape]="'6px 6px 0 0 '">
+          <tc-avatar-group>
+            <tc-avatar [src]="'assets/content/avatar-1.jpg'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [tcBgColor]="'#5b97f7'" [initials]="'AI'"></tc-avatar>
+            <tc-avatar [src]="'assets/content/user-40-3.jpg'"></tc-avatar>
+          </tc-avatar-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+          <pre><code [highlight]="demoGroup"></code></pre>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Initials grouped'">
+          <tc-avatar-group>
+            <tc-avatar [tcColor]="'#fff'" [initials]="'AI'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [tcBgColor]="'#5b97f7'" [initials]="'JR'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [initials]="'JP'"></tc-avatar>
+            <tc-avatar [tcBgColor]="'#f741b5'" [initials]="'AI'"></tc-avatar>
+          </tc-avatar-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Custom styles initials'">
+          <tc-avatar-group>
+            <tc-avatar [tcColor]="'#4a505c'" [tcBgColor]="'#5b97f7'" [initials]="'GF'"></tc-avatar>
+            <tc-avatar [tcColor]="'#fff'" [tcBgColor]="'#7cdb86'" [initials]="'AI'"></tc-avatar>
+            <tc-avatar [tcColor]="'#000'" [tcBgColor]="'#805aff'" [initials]="'JP'"></tc-avatar>
+          </tc-avatar-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Loading avatars grouped'">
+          <tc-avatar-group>
+            <tc-avatar [tcBgColor]="'#7cdb86'" [loading]="true"></tc-avatar>
+            <tc-avatar [tcBgColor]="'#5b97f7'" [loading]="true"></tc-avatar>
+            <tc-avatar [tcBgColor]="'#805aff'" [loading]="true"></tc-avatar>
+          </tc-avatar-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Avatar shapes grouped'" class="mb-0">
+          <tc-avatar-group>
+            <tc-avatar [tcBgColor]="'#5b97f7'" [initials]="'AI'" [tcShape]="15"></tc-avatar>
+            <tc-avatar [tcBgColor]="'#7cdb86'" [initials]="'DT'" [tcShape]="15"></tc-avatar>
+            <tc-avatar [tcBgColor]="'#805aff'" [initials]="'CT'" [tcShape]="15"></tc-avatar>
+          </tc-avatar-group>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+</div>

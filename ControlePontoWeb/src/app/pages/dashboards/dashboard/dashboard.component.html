@@ -1,0 +1,386 @@
+<tc-alert
+  [view]="'success'"
+  [iconColor]="'rgba(124,219,134, .8)'"
+  [beforeIcon]="'icofont-info-circle'"
+  class="mb-4 animated fadeInDown delay-01s"
+>
+  This is a warning message. Please pay attention to view it.
+</tc-alert>
+
+<div class="row">
+  <div class="col-12 col-xl-8">
+    <tc-card [title]="'Activity'" [padding]="0">
+      <div echarts [options]="lineOptions" class="chart-container container-h-350"></div>
+    </tc-card>
+  </div>
+
+  <div class="col-12 col-xl-4">
+    <tc-card [title]="'Recent Posts'">
+      <tc-list>
+        <tc-list-item class="animated fadeInUp delay-01s">
+          <img [tcImageSize]="70" tc-list-avatar src="assets/content/user-76-2.jpg">
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>It’s all about simplicity…</span>
+          </div>
+
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>Ian Holm</span>
+            <tc-badge [size]="'xs'" [view]="'warning'">Sent</tc-badge>
+          </div>
+        </tc-list-item>
+
+        <tc-list-item class="animated fadeInUp delay-02s">
+          <img [tcImageSize]="70" tc-list-avatar src="assets/content/user-76-1.jpg">
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>Chocolate Cake exclusively brings you the classic...</span>
+          </div>
+
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>Anna Smith</span>
+            <tc-badge [size]="'xs'" [view]="'warning'">Sent</tc-badge>
+          </div>
+        </tc-list-item>
+
+        <tc-list-item class="animated fadeInUp delay-03s">
+          <img [tcImageSize]="70" tc-list-avatar src="assets/content/user-76-3.jpg">
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>Say something I’m giving up on you</span>
+          </div>
+
+          <div class="d-flex justify-content-between" tc-list-line>
+            <span>James Holt</span>
+            <tc-badge [size]="'xs'" [view]="'warning'">Sent</tc-badge>
+          </div>
+        </tc-list-item>
+      </tc-list>
+
+      <button
+        tc-button
+        class="mt-4 animated fadeInUp delay-04s"
+        [tcBgColor]="['#f0f2f6', '#2fa7ff']"
+        [tcShape]="6"
+        [tcColor]="['rgba(74,80,92, .6)', '#fff']"
+        [block]="true"
+        [align]="'center'"
+      >
+        View more
+      </button>
+    </tc-card>
+  </div>
+
+  <div class="col-md-8 col-sm-12">
+    <tc-card [title]="'Browsers'">
+      <div echarts [options]="browsersOptions" class="chart-container container-h-320"></div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-4 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [padding]="0">
+          <div class="d-flex p-4 justify-content-between">
+            <div class="title-box d-flex flex-column">
+              <h5 [tcFontSize]="18" class="title mb-1">Apple</h5>
+              <span class="mb-2 sub-title">Revenue generated</span>
+              <span class="d-flex align-items-baseline" [tcColor]="'#c565e7'">98,5<i class="icofont-rounded-right-up ml-1"></i></span>
+            </div>
+
+            <span [tcFontSize]="37" class="income">
+              $98,5
+            </span>
+          </div>
+
+          <div echarts [options]="piOptions" class="chart-container container-h-100 negative-indents"></div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [padding]="0">
+          <div class="d-flex p-4 justify-content-between">
+            <div class="title-box d-flex flex-column">
+              <h5 [tcFontSize]="18" class="title mb-1">Samsung</h5>
+              <span class="mb-2 sub-title">Revenue generated</span>
+              <span class="d-flex align-items-baseline" [tcColor]="'#7cdb86'">87,6<i class="icofont-rounded-right-up ml-1"></i></span>
+            </div>
+
+            <span [tcFontSize]="37" class="income">
+              $87,6
+            </span>
+          </div>
+
+          <div echarts [options]="pi2Options" class="chart-container container-h-100 negative-indents"></div>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-3 col-lg-6 col-sm-12">
+    <tc-card>
+      <div class="widget-card d-flex flex-column justify-content-center align-items-center">
+        <tc-circle-progress [value]="84"></tc-circle-progress>
+
+        <div class="info">
+          <h6 class="title mb-0">Server load</h6>
+
+          <div class="desc text-center">
+            Operations run according to general amount
+          </div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-xl-3 col-lg-6 col-sm-12">
+    <tc-card>
+      <div class="widget-card d-flex flex-column justify-content-center align-items-center">
+        <tc-icon 
+          class="mb-3"
+          [tcShape]="500"
+          [tcFontSize]="20"
+          [padding]="'25px'"
+          [tcColor]="'#6e40d8'"
+          [iconClass]="'icofont-color-picker'"
+          [tcBgColor]="'rgba(110,64,216, .2)'"
+        ></tc-icon>
+
+        <div class="info text-center">
+          <span class="title" [tcFontSize]="'40px'">15.2k</span>
+
+          <div [tcFontSize]="'16px'" class="desc mb-2">
+            <span class="desc font-weight-bold">
+              Followers
+            </span>
+          </div>
+
+          <p [tcColor]="'#7ed321'"><i class="icofont-caret-up "></i>98,5%</p>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-xl-3 col-lg-6 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card>
+          <div class="mb-4" [tcFontSize]="'40px'">
+            $34.4k
+          </div>
+
+          <div class="info">
+            <span class="title">Sales</span> <br>
+            <span class="desc">Operations run according to general amount</span>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card>
+          <div class="mb-4" [tcFontSize]="'40px'">
+            2.1k
+          </div>
+
+          <div class="info">
+            <span class="title">Orders</span> <br>
+            <span class="desc">Operations run according to general amount</span>
+          </div>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-3 col-lg-6 col-sm-12">
+    <tc-card [tcGradient]="['#cd5447', '#b3589c', '#9d5ce5']">
+      <div class="widget-card d-flex flex-column justify-content-center align-items-center" [tcColor]="'#fff'">
+        <tc-icon class="mb-3 mt-auto" [tcShape]="500" [tcFontSize]="20" [padding]="'25px'" [tcColor]="'#f8e71c'" [iconClass]="'icofont-color-picker'"
+          [tcBgColor]="'rgba(74,74,74, .15)'"></tc-icon>
+
+        <div class="info text-center mb-auto" [tcColor]="'#fff'">
+          <div [tcFontSize]="'16px'" class="desc mb-2">
+            <span class="desc">
+              San Francisco
+            </span>
+          </div>
+
+          <span class="title" [tcFontSize]="'40px'" [tcColor]="'#fff'">-5&#176;</span>
+        </div>
+
+        <div class="w-100 align-self-end d-flex d-flex justify-content-between">
+          <div class="d-flex align-items-center justify-content-between" [tcFontSize]="12">
+            <tc-icon [iconClass]="'icofont-water-drop'" [tcColor]="'#f8e71c'"></tc-icon>
+            98,5%
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between" [tcFontSize]="12">
+            98,5%
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between" [tcFontSize]="12">
+            <tc-icon [iconClass]="'icofont-paper-plane'" [tcColor]="'#f8e71c'"></tc-icon>
+            98,5%
+          </div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+</div>
+
+<tc-card [padding]="'0 0 20px'" class="table-card">
+  <div tc-card-header class="card-header mb-4">
+    <div class="title-box">
+      <h5 class="title">Recent orders</h5>
+    </div>
+
+    <div class="actions d-flex">
+      <tc-icon [iconClass]="'icofont-archive'"></tc-icon>
+      <tc-icon [iconClass]="'icofont-trash'"></tc-icon>
+      <tc-icon [iconClass]="'icofont-navigation-menu'"></tc-icon>
+    </div>
+  </div>
+
+  <tc-table *ngIf="tableData" [rows]="tableData" [hovered]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block d-flex align-items-center">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <span>{{ row.person }}</span>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="nowrap"><a href="" class="link" [routerLink]="[value]">Link to page</a></span>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Left'" [columnName]="'left'"></tc-table-col>
+  </tc-table>
+</tc-card>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <tc-card>
+      <div tc-card-header class="title-box">
+        <h5 class="title">Tickets overview</h5>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mb-5 mt-2">
+        <div class="d-lg-flex flex-column d-none mr-auto" [tcFontSize]="13">
+          <span class="card-label">Completed</span>
+          <span>78,661</span>
+        </div>
+
+        <tc-circle-progress [value]="80" [rotate]="120" [size]="'170px'"></tc-circle-progress>
+
+        <div class="d-lg-flex flex-column d-none ml-auto" [tcFontSize]="13">
+          <span class="card-label">Left</span>
+          <span>1,356</span>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="btn active no-style">Today</button>
+        <button class="btn disabled no-style">Last Week</button>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <tc-card>
+      <div tc-card-header class="d-flex justify-content-between align-items-start">
+        <div class="title-box">
+          <h5 class="title">Popularity</h5>
+        </div>
+
+        <tc-select
+          [placeholder]="'People'"
+          [options]="peopleOptions"
+          [selected]="'Jeff Bezos'"
+          class="mw-140"
+        ></tc-select>
+      </div>
+
+      <div class="chart-card">
+        <div class="d-flex justify-content-center">
+          <div echarts [options]="pieOptions" class="chart-container container-h-180 container-w-180"></div>
+        </div>
+
+        <div class="chart-text-block">
+          <div [tcFontSize]="28" class="title">110k</div>
+          <div class="label">VOTES</div>
+        </div>
+
+        <div class="markers d-flex justify-content-start flex-column">
+          <div class="marker-block d-flex justify-content-start align-items-center">
+            <div [tcBgColor]="'#f741b5'" class="marker"></div>
+            <div class="marker-label">Bill Gates</div>
+          </div>
+          <div class="marker-block d-flex justify-content-start align-items-center">
+            <div [tcBgColor]="'#2fa7ff'" class="marker"></div>
+            <div class="marker-label">Tim Cook</div>
+          </div>
+          <div class="marker-block d-flex justify-content-start align-items-center">
+            <div [tcBgColor]="'#7cdb86'" class="marker"></div>
+            <div class="marker-label">Jeff Bezos</div>
+          </div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <tc-card class="mb-md-0">
+      <div tc-card-header class="title-box">
+        <h5 class="title mb-1">Performance</h5>
+        <span class="sub-title">Operations run according to general amount</span>
+      </div>
+
+      <div class="d-flex align-items-end chart-container container-h-300">
+        <div class="progresses">
+          <tc-progress [label]="'Angular'" [percent]="true" [color]="'#f741b5'" [progress]="35"></tc-progress>
+          <tc-progress [label]="'HTML'" [percent]="true" [color]="'#7cdb86'" [progress]="50"></tc-progress>
+          <tc-progress [label]="'JavaScript'" [percent]="true" [color]="'#fc8b37'" [progress]="65"></tc-progress>
+          <tc-progress [label]="'React'" [percent]="true" [color]="'#2fa7ff'" [progress]="80"></tc-progress>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <tc-card class="mb-0">
+      <div tc-card-header class="d-flex justify-content-between align-items-start">
+        <div class="title-box">
+          <h5 class="title mb-1">Success rate</h5>
+          <span class="sub-title">Operations run according to general amount</span>
+        </div>
+
+        <tc-select [placeholder]="'Company'" [options]="companyOptions" [selected]="'Google'" class="mw-140"></tc-select>
+      </div>
+
+      <div echarts [options]="barOptions" class="chart-container container-h-300"></div>
+    </tc-card>
+  </div>
+</div>

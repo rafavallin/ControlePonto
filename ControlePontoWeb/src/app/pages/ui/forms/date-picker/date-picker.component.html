@@ -1,0 +1,199 @@
+<tc-card [title]="'Simple date picker'" [tcShape]="'6px 6px 0 0'" class="mb-0">
+  <tc-form-group class="mb-0">
+    <nz-date-picker></nz-date-picker>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+       <tc-card [title]="'Basic date picker'">
+          <tc-form-group>
+            <nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-month-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" nzPlaceHolder="Select month"></nz-month-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-year-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" nzPlaceHolder="Select year"></nz-year-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-week-picker [(ngModel)]="date" (ngModelChange)="getWeek($event)" nzPlaceHolder="Select week"></nz-week-picker>
+          </tc-form-group>
+
+          <button tc-button (click)="changeLanguage()">Switch language</button>
+       </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Disabled pickers'">
+          <tc-form-group>
+            <nz-date-picker nzDisabled></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-month-picker nzDisabled></nz-month-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-range-picker nzDisabled></nz-range-picker>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Extra footer'">
+          <tc-form-group>
+            <nz-date-picker [nzRenderExtraFooter]="footerRender"></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-month-picker [nzRenderExtraFooter]="footerRender" nzPlaceHolder="Select month"></nz-month-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-date-picker [nzRenderExtraFooter]="plainFooter" nzShowTime></nz-date-picker>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card>
+          <tc-form-group>
+            <nz-date-picker [nzDateRender]="tplRender"></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-range-picker [nzDateRender]="tplRender"></nz-range-picker>
+          </tc-form-group>
+
+          <ng-template #tplRender let-current>
+            <div class="ant-calendar-date" [class.border]="current.getDate() === 1">
+              {{ current.getDate() }}
+            </div>
+          </ng-template>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Custom date format'">
+          <tc-form-group>
+            <nz-date-picker [nzFormat]="'yyyy/MM/dd'"></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-month-picker [nzFormat]="'yyyy/MM'"></nz-month-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-range-picker [nzFormat]="'yyyy-MM'"></nz-range-picker>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Range picker'">
+          <tc-form-group>
+            <nz-range-picker nzFormat="yyyy-MM-dd" (ngModelChange)="onChange($event)" nzShowTime></nz-range-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <div class="elem-list">
+              <nz-date-picker
+                [nzDisabledDate]="disabledStartDate"
+                [nzFormat]="'yyyy-MM-dd'"
+                class="mr-4"
+                [(ngModel)]="startValue"
+                nzPlaceHolder="Start"
+                (ngModelChange)="onStartChange($event)"
+                (nzOnOpenChange)="handleStartOpenChange($event)"
+              ></nz-date-picker>
+
+              <nz-date-picker
+                [nzDisabledDate]="disabledEndDate"
+                [nzFormat]="'yyyy-MM-dd'"
+                [(ngModel)]="endValue"
+                nzPlaceHolder="End"
+                [nzOpen]="endOpen"
+                (nzOnOpenChange)="handleEndOpenChange($event)"
+                (ngModelChange)="onEndChange($event)"
+              ></nz-date-picker>
+            </div>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Choose Time'">
+          <tc-form-group>
+            <nz-date-picker
+              nzShowTime
+              nzFormat="yyyy-MM-dd HH:mm:ss"
+              nzPlaceHolder="Select Time"
+              (ngModelChange)="onTimeChange($event)"
+              (nzOnOk)="onOk($event)"
+            ></nz-date-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-range-picker
+              [nzShowTime]="{ nzFormat: 'HH:mm' }"
+              nzFormat="yyyy-MM-dd HH:mm"
+              [nzPlaceHolder]="['Start Time', 'End Time']"
+              (ngModelChange)="onTimeChange($event)"
+              (nzOnOk)="onOk($event)"
+            ></nz-range-picker>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Date presets'">
+          <tc-form-group>
+            <nz-range-picker
+              ngModel
+              [nzRanges]="ranges"
+              (ngModelChange)="onChange($event)"
+            ></nz-range-picker>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-range-picker
+              ngModel
+              [nzRanges]="ranges"
+              nzShowTime nzFormat="yyyy/MM/dd"
+              (ngModelChange)="onChange($event)"
+            ></nz-range-picker>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Controlled Panels'">
+          <nz-date-picker
+            [nzMode]="dateMode"
+            nzShowTime
+            (nzOnOpenChange)="handleDateOpenChange($event)"
+            (nzOnPanelChange)="handleDatePanelChange($event)"
+          ></nz-date-picker>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<tc-alert [iconColor]="'#2fa7ff'" [beforeIcon]="'icofont-info-circle'">
+  More info about date picker can be found <a href="https://ng.ant.design/components/date-picker/en">here</a>
+</tc-alert>

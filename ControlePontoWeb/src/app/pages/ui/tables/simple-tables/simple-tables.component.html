@@ -1,0 +1,340 @@
+<tc-card [title]="'Default'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Item list'" [padding]="'20px 0'" [view]="'transparent'">
+  <tc-table [rows]="tableData" [list]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Hover'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [hovered]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Striped'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [striped]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Bordered'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [bordered]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Borderless'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [borderLess]="true">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Head style'" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [headerBgColor]="'#cd5447'" [headerColor]="'#fff'">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>
+
+<tc-card [title]="'Body style'" class="mb-0" [padding]="'20px 0'">
+  <tc-table [rows]="tableData" [headerBgColor]="'#7cdb86'" [headerColor]="'#000'" [contentBgColor]="'#ecfcb0'" [contentColor]="'#000'">
+    <tc-table-col [columnTitle]="'User'" [columnName]="'img'">
+      <ng-template #tableTDTemplate let-row="row">
+        <div class="person-block">
+          <tc-avatar [src]="row.img"></tc-avatar>
+          <div class="label">{{ row.person }}</div>
+        </div>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Order'" [columnName]="'order'"></tc-table-col>
+
+    <tc-table-col [columnTitle]="'Time'" [columnName]="'time'">
+      <ng-template #tableTDTemplate let-value>
+        <span class="time">{{ value }}</span>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Page'" [columnName]="'page'">
+      <ng-template #tableTDTemplate let-value>
+        <a href="" class="link" [routerLink]="[value]"><i class="icofont-external-link"></i></a>
+      </ng-template>
+    </tc-table-col>
+    <tc-table-col [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableTDTemplate let-value>
+        <tc-badge [view]="value" [ngSwitch]="value" [size]="'sm'">
+          <ng-container *ngSwitchCase="'success'">DONE</ng-container>
+          <ng-container *ngSwitchCase="'info'">PENDING</ng-container>
+          <ng-container *ngSwitchCase="'warning'">SENT</ng-container>
+          <ng-container *ngSwitchCase="'error'">CANCELED</ng-container>
+          <ng-container *ngSwitchDefault>NEW</ng-container>
+        </tc-badge>
+      </ng-template>
+    </tc-table-col>
+
+    <tc-table-col [columnTitle]="'Price'" [columnName]="'price'">
+      <ng-template #tableTDTemplate let-value>${{ value }}</ng-template>
+    </tc-table-col>
+  </tc-table>
+</tc-card>

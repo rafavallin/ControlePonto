@@ -1,0 +1,36 @@
+<tc-card [title]="'Basic progress bar'" class="mb-0" [tcShape]="'6px 6px 0 0'">
+  <tc-progress [color]="'#ec2427'" [progress]="35"></tc-progress>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<tc-card [title]="'Diferent sizes'">
+  <h6>Extra small</h6>
+  <tc-progress [color]="'#ec2427'" [progress]="35" [size]="'ex-sm'"></tc-progress>
+  <tc-progress [color]="'#50bd35'" [progress]="50" [size]="'ex-sm'"></tc-progress>
+  <tc-progress [color]="'#678cf9'" [progress]="65" [size]="'ex-sm'"></tc-progress>
+
+  <h6>Small</h6>
+  <tc-progress [color]="'#ec2427'" [progress]="35" [size]="'sm'"></tc-progress>
+  <tc-progress [color]="'#50bd35'" [progress]="50" [size]="'sm'"></tc-progress>
+  <tc-progress [color]="'#678cf9'" [progress]="65" [size]="'sm'"></tc-progress>
+
+  <h6>Default</h6>
+  <tc-progress [color]="'#ec2427'" [progress]="35"></tc-progress>
+  <tc-progress [color]="'#50bd35'" [progress]="50"></tc-progress>
+  <tc-progress [color]="'#678cf9'" [progress]="65"></tc-progress>
+
+  <h6>Large</h6>
+  <tc-progress [color]="'#ec2427'" [progress]="35" [size]="'lg'"></tc-progress>
+  <tc-progress [color]="'#50bd35'" [progress]="50" [size]="'lg'"></tc-progress>
+  <tc-progress [color]="'#678cf9'" [progress]="65" [size]="'lg'"></tc-progress>
+</tc-card>
+
+<tc-card [title]="'With label'" class="mb-0">
+  <tc-progress [label]="'Angular'" [percent]="true" [color]="'#ec2427'" [progress]="35"></tc-progress>
+  <tc-progress [label]="'HTML'" [percent]="true" [color]="'#50bd35'" [progress]="50"></tc-progress>
+  <tc-progress [label]="'JavaScript'" [percent]="true" [color]="'#678cf9'" [progress]="65"></tc-progress>
+  <tc-progress [label]="'React'" [percent]="true" [color]="'#e24d4d'" [progress]="80"></tc-progress>
+</tc-card>

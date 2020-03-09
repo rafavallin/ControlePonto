@@ -1,0 +1,25 @@
+@import '../../../../../assets/sass/variables';
+
+:host {
+  .person-block {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+    >* {
+      margin: 0 10px;
+    }
+  }
+  .link {
+    color: accent-pallete(600);
+  }
+  .time {
+    opacity: .4;
+  }
+  .section-title {
+    color: #4a505c;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: $module-rem * 3;
+    margin: 0;
+  }
+}

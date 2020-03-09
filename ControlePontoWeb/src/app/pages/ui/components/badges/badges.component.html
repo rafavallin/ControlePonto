@@ -1,0 +1,71 @@
+<tc-card [title]="'Default badge'" [tcShape]="'6px 6px 0 0'" class="mb-0">
+  <tc-badge>Default</tc-badge>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<tc-card [title]="'Badge styles'">
+  <div class="badges-list">
+    <tc-badge>Default</tc-badge>
+    <tc-badge [view]="'accent'">Accent</tc-badge>
+    <tc-badge [view]="'success'">Success</tc-badge>
+    <tc-badge [view]="'info'">Info</tc-badge>
+    <tc-badge [view]="'warning'">Warning</tc-badge>
+    <tc-badge [view]="'error'">Error</tc-badge>
+    <tc-badge [view]="'gradient'">Gradient</tc-badge>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Outline badges'">
+  <div class="badges-list">
+    <tc-badge [outline]="true">Default</tc-badge>
+    <tc-badge [outline]="true" [view]="'accent'">Accent</tc-badge>
+    <tc-badge [outline]="true" [view]="'success'">Success</tc-badge>
+    <tc-badge [outline]="true" [view]="'info'">Info</tc-badge>
+    <tc-badge [outline]="true" [view]="'warning'">Warning</tc-badge>
+    <tc-badge [outline]="true" [view]="'error'">Error</tc-badge>
+    <tc-badge [outline]="true" [view]="'gradient'">Gradient</tc-badge>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Badge sizes'">
+  <div class="badges-list">
+    <tc-badge [size]="'xs'">Ultra small</tc-badge>
+    <tc-badge [size]="'sm'" [view]="'accent'">Small</tc-badge>
+    <tc-badge [view]="'success'">Default</tc-badge>
+    <tc-badge [size]="'lg'" [view]="'warning'">Large</tc-badge>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Badge shapes'">
+  <div class="badges-list">
+    <tc-badge>Default</tc-badge>
+    <tc-badge [tcShape]="0">Square</tc-badge>
+    <tc-badge [tcShape]="6">Rounded</tc-badge>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Text & icons'" class="mb-0">
+  <div class="badges-list">
+    <tc-badge>
+      <tc-icon [iconClass]="'icofont-bug'" [padding]="0" class="mr-2"></tc-icon>Bugs
+    </tc-badge>
+    <tc-badge [view]="'accent'">
+      <tc-icon [iconClass]="'icofont-cart'" [padding]="0" class="mr-2"></tc-icon>Cart
+    </tc-badge>
+    <tc-badge [view]="'success'">
+      <tc-icon [iconClass]="'icofont-clip'" [padding]="0" class="mr-2"></tc-icon>Files
+    </tc-badge>
+    <tc-badge [view]="'info'">
+      Label<tc-icon [iconClass]="'icofont-label'" [padding]="0" class="ml-2"></tc-icon>
+    </tc-badge>
+    <tc-badge [view]="'warning'">
+      Notification<tc-icon [iconClass]="'icofont-notification'" [padding]="0" class="ml-2"></tc-icon>
+    </tc-badge>
+    <tc-badge [view]="'error'">
+      Sale<tc-icon [iconClass]="'icofont-sale-discount'" [padding]="0" class="ml-2"></tc-icon>
+    </tc-badge>
+  </div>
+</tc-card>

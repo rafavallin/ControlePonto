@@ -1,0 +1,52 @@
+<tc-card [title]="'Basic circle progress'" class="mb-0" [tcShape]="'6px 6px 0 0'">
+  <div class="elem-list">
+    <tc-circle-progress [value]="50"></tc-circle-progress>
+  </div>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<tc-card [title]="'Custom sizes'">
+  <div class="elem-list align-items-center">
+    <tc-circle-progress [size]="'250px'" [value]="50"></tc-circle-progress>
+    <tc-circle-progress [size]="'200px'" [value]="50"></tc-circle-progress>
+    <tc-circle-progress [value]="55"></tc-circle-progress>
+    <tc-circle-progress [size]="'100px'" [value]="70"></tc-circle-progress>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Progressbar rotate'">
+  <div class="elem-list">
+    <tc-circle-progress [rotate]="90" [value]="50"></tc-circle-progress>
+    <tc-circle-progress [rotate]="180" [value]="75"></tc-circle-progress>
+    <tc-circle-progress [rotate]="120" [value]="83"></tc-circle-progress>
+    <tc-circle-progress [rotate]="195" [value]="83"></tc-circle-progress>
+    <tc-circle-progress [rotate]="0" [value]="75"></tc-circle-progress>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Custom color'">
+  <div class="elem-list">
+    <tc-circle-progress [strokeColor]="'#f741b5'" [secondaryColor]="'#2fa7ff'" [value]="50"></tc-circle-progress>
+    <tc-circle-progress [strokeColor]="'#fc8b37'" [secondaryColor]="'#7cdb86'" [value]="55"></tc-circle-progress>
+    <tc-circle-progress [strokeColor]="'#7cdb86'" [secondaryColor]="'#fc8b37'" [value]="70"></tc-circle-progress>
+    <tc-circle-progress [strokeColor]="'#805aff'" [secondaryColor]="'#f741b5'" [value]="60"></tc-circle-progress>
+    <tc-circle-progress [strokeColor]="'#2fa7ff'" [secondaryColor]="'#805aff'" [value]="60"></tc-circle-progress>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Stroke width'" class="mb-0">
+  <div class="elem-list">
+    <tc-circle-progress [value]="55"></tc-circle-progress>
+
+    <tc-circle-progress [strokeWidth]="2" [value]="50"></tc-circle-progress>
+
+    <tc-circle-progress [strokeWidth]="3" [value]="55"></tc-circle-progress>
+
+    <tc-circle-progress [strokeWidth]="4" [value]="70"></tc-circle-progress>
+
+    <tc-circle-progress [strokeWidth]="5" [value]="75"></tc-circle-progress>
+  </div>
+</tc-card>

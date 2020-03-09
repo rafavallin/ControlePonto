@@ -1,0 +1,99 @@
+<tc-card [title]="'Basic'" class="mb-0" [tcShape]="'6px 6px 0 0'">
+  <tc-form-group>
+    <tc-checkbox></tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox>Checkbox label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox [value]="true">Checked</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox [disabled]="true">Disabled</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-checkbox [value]="true" [disabled]="true">Checked disabled</tc-checkbox>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<tc-card [title]="'Custom styles'">
+  <tc-form-group>
+    <tc-checkbox
+      [value]="false"
+      [bgColor]="['transparent', '#transparent', 'rgba(252,139,55, .3)']"
+      [borderColor]="['rgba(252,139,55, .3)', 'rgba(252,139,55, .3)', 'rgba(252,139,55, .3)']"
+      [color]="['#fc8b37', '#fc8b37', '#fc8b37']"
+    >Label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [value]="true"
+      [bgColor]="['transparent', '#transparent', '#7cdb86']"
+      [borderColor]="['#7cdb86', '#7cdb86', '#7cdb86']"
+      [color]="['#7cdb86', '#7cdb86', '#fff']"
+    >Label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [value]="false"
+      [bgColor]="['#805aff', '#805aff', 'transparent']"
+      [borderColor]="['#805aff', '#805aff', '#805aff']"
+      [color]="['#fff', '#fff', '#805aff']"
+    >Label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [value]="true"
+      [bgColor]="['transparent', 'transparent', '#ed5564']"
+      [borderColor]="['#ed5564', '#ed5564', '#ed5564']"
+      [color]="['#ed5564', '#ed5564', '#fff']"
+    >Label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-checkbox
+      [value]="false"
+      [disabled]="true"
+      [bgColor]="['transparent', '#7ccee5', '#244ae5', 'rgba(112,152,252, .6)']"
+      [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', 'rgba(112,152,252, .6)']"
+      [color]="['#fff', '#fff', '#fff', '#fff']"
+    >Label</tc-checkbox>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-checkbox formControlName="checkboxField"></tc-checkbox>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.checkboxField"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-checkbox #templateForm></tc-checkbox>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="templateForm.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

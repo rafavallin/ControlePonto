@@ -1,0 +1,138 @@
+<tc-card [title]="'Basic alert'" [tcShape]="'6px 6px 0 0'" class="mb-0">
+  <tc-alert>
+    This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<tc-card [title]="'Alert styles'">
+  <tc-alert class="mb-4">
+    This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'accent'" class="mb-4">
+    This is <strong>Accent alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'success'" class="mb-4">
+    This is <strong>Success alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'info'" class="mb-4">
+    This is <strong>Info alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'warning'" class="mb-4">
+    This is <strong>Warning alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'error'">
+    This is <strong>Error alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+</tc-card>
+
+<tc-card [title]="'Removable alerts'">
+  <tc-alert [removable]="true" class="mb-4">
+    This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [removable]="true" [view]="'accent'" class="mb-4">
+    This is <strong>Accent alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [removable]="true" [view]="'success'" class="mb-4">
+    This is <strong>Success alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [removable]="true" [view]="'info'" class="mb-4">
+    This is <strong>Info alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [removable]="true" [view]="'warning'" class="mb-4">
+    This is <strong>Warning alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [removable]="true" [view]="'error'">
+    This is <strong>Error alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+</tc-card>
+
+<tc-card [title]="'Alert shapes'">
+  <tc-alert [removable]="true" [view]="'success'" class="mb-4">Default alert!</tc-alert>
+
+  <tc-alert [tcShape]="500" [removable]="true" [view]="'info'" class="mb-4">Rounded alert!</tc-alert>
+
+  <tc-alert [tcShape]="0" [removable]="true" [view]="'error'">Square alert!</tc-alert>
+</tc-card>
+
+<tc-card [title]="'With Icons'">
+  <tc-alert [tcShape]="50" [beforeIcon]="'icofont-info-circle'" [iconColor]="'#2fa7ff'" class="mb-4">
+    Icon before.
+  </tc-alert>
+
+  <tc-alert [afterIcon]="'icofont-alarm'" [view]="'success'" [iconColor]="'#7cdb86'" [removable]="true" class="mb-4">
+    Icon after.
+  </tc-alert>
+
+  <tc-alert
+    [beforeIcon]="'icofont-cart'"
+    [afterIcon]="'icofont-check-circled'"
+    [removable]="true"
+    [view]="'error'"
+    [iconColor]="'#ed253d'"
+  >
+    Icons before & after.
+  </tc-alert>
+</tc-card>
+
+<tc-card [title]="'Custom style'">
+  <tc-alert class="mb-4" [tcColor]="'#2ced80'">
+    Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [tcColor]="'#fff'" [tcGradient]="['#cd5447', '#9d5ce5']" class="mb-4">
+    Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [tcColor]="'#000'" [tcBorderColor]="'#46b3a4'" [tcBorderStyle]="'dotted'" class="mb-4">
+    Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [tcColor]="'#000'" [tcBorderColor]="'#b3672e'" [tcBorderStyle]="'dashed'" class="mb-4">
+    Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [view]="'error'" [tcFontSize]="'1.4rem'">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque eveniet fugiat hic mollitia!</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </tc-alert>
+</tc-card>
+
+<tc-card [title]="'Outline alerts'" class="mb-0">
+  <tc-alert [outline]="true" [tcColor]="'#000'" class="mb-4">
+    This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [view]="'accent'" class="mb-4">
+    This is <strong>Accent alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [view]="'success'" class="mb-4">
+    This is <strong>Success alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [view]="'info'" class="mb-4">
+    This is <strong>Info alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [view]="'warning'" class="mb-4">
+    This is <strong>Warning alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+
+  <tc-alert [outline]="true" [view]="'error'">
+    This is <strong>Error alert.</strong> Lorem ipsum dolor sit amet.
+  </tc-alert>
+</tc-card>

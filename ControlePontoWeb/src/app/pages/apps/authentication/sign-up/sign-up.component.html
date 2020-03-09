@@ -1,0 +1,40 @@
+<form [formGroup]="loginForm" (ngSubmit)="signUp()">
+  <div class="title-block">
+    <h5 class="form-title">Sign Up</h5>
+    <a class="link right" [routerLink]="['/public/sign-in']">Already registered ?</a>
+  </div>
+
+  <tc-form-group>
+    <tc-input [prefixIcon]="'icofont-ui-email'" [placeholder]="'Email'" formControlName="login"></tc-input>
+
+    <ng-container *ngIf="login.invalid && (login.touched || login.dirty)">
+      <span @fadeIn class="error" *ngIf="login.getError('required')">Please enter your email</span>
+      <span @fadeIn class="error" *ngIf="login.getError('email')">Please enter valid email</span>
+    </ng-container>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [prefixIcon]="'icofont-lock'" [type]="'password'" [placeholder]="'Password'" formControlName="password"></tc-input>
+
+    <ng-container *ngIf="password.invalid && (password.touched || password.dirty)">
+      <span @fadeIn class="error" *ngIf="password.getError('required')">Please enter password</span>
+      <span @fadeIn class="error" *ngIf="password.getError('minlength')">Password must be at least 5 characters long</span>
+    </ng-container>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [prefixIcon]="'icofont-check-circled'" [type]="'password'" [placeholder]="'Confirm password'" formControlName="confirm"></tc-input>
+
+    <ng-container *ngIf="confirm.invalid && (confirm.touched || confirm.dirty)">
+      <span @fadeIn class="error" *ngIf="confirm.getError('notMatch')">Password's do not match</span>
+    </ng-container>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox class="checkbox">I have read <a href="#">terms and conditions</a></tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group class="mt-1 d-flex justify-content-end align-items-center">
+    <button type="submit" tc-button [view]="'gradient'">Sign Up</button>
+  </tc-form-group>
+</form>

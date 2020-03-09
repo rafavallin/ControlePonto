@@ -1,0 +1,155 @@
+<tc-card class="mb-0" [title]="'Base slider'" [tcShape]="'6px 6px 0 0'">
+  <nz-slider [(ngModel)]="value1"></nz-slider>
+  <nz-slider nzRange [(ngModel)]="rangeValue1"></nz-slider>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Disabled sliders'">
+          <tc-form-group>
+            <nz-slider [nzDisabled]="disabled" [ngModel]="56"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-slider [nzDisabled]="disabled" [nzRange]="true" [ngModel]="rangeValue2"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <tc-switcher [(ngModel)]="disabled">Disabled</tc-switcher>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Slider with icons'">
+          <div class="icon-wrapper test-class">
+            <tc-icon [iconClass]="'icofont-sad'" [tcFontSize]="20" [ngClass]="{ 'highlighted': preHighLight }"></tc-icon>
+            <nz-slider [nzMin]="min" [nzMax]="max" [(ngModel)]="sliderValue"></nz-slider>
+            <tc-icon [tcFontSize]="20" [iconClass]="'icofont-slightly-smile'"  [ngClass]="{ 'highlighted': afterHighLight }"></tc-icon>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Vertical slider'">
+          <div class="vertical-sliders">
+            <div class="vertical-slider">
+              <nz-slider nzVertical [ngModel]="30"></nz-slider>
+            </div>
+
+            <div class="vertical-slider">
+              <nz-slider nzVertical nzRange [nzStep]="10" [ngModel]="[20, 50]"></nz-slider>
+            </div>
+
+            <div class="vertical-slider">
+              <nz-slider nzVertical nzRange [nzMarks]="marks" [ngModel]="[26, 37]"></nz-slider>
+            </div>
+          </div>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Slider with number input'">
+          <tc-form-group>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <nz-slider [nzMin]="0" [nzMax]="100" [ngModel]="value2"></nz-slider>
+              </div>
+
+              <div class="col-md-4 col-sm-12">
+                <tc-input [(ngModel)]="value2" [type]="'number'"></tc-input>
+              </div>
+            </div>
+          </tc-form-group>
+
+        <tc-form-group class="mb-0">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <nz-slider [ngModel]="value3"></nz-slider>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+              <tc-input [(ngModel)]="value3" [type]="'number'"></tc-input>
+            </div>
+          </div>
+        </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Graduented slider'">
+          <tc-form-group>
+            <tc-form-label>included=true</tc-form-label>
+
+            <nz-slider [nzMarks]="marks" [ngModel]="37"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group>
+            <nz-slider [nzMarks]="marks" nzIncluded nzRange [ngModel]="[26, 37]"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group>
+            <tc-form-label>included=false</tc-form-label>
+            <nz-slider [nzMarks]="marks" [nzIncluded]="false" [ngModel]="37"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group>
+            <tc-form-label>marks & step</tc-form-label>
+            <nz-slider [nzMarks]="marks" [nzStep]="10" [ngModel]="37"></nz-slider>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Custom tooltip'">
+          <tc-form-group>
+            <nz-slider [ngModel]="65" [nzTipFormatter]="formatter"></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-slider [ngModel]="35" [nzTipFormatter]="null"></nz-slider>
+          </tc-form-group>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Slider events'">
+          <tc-form-group>
+            <nz-slider
+              [ngModel]="37"
+              (ngModelChange)="onChange($event)"
+              (nzOnAfterChange)="onAfterChange($event)"
+            ></nz-slider>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+            <nz-slider
+              nzRange
+              [nzStep]="10"
+              [(ngModel)]="rangeValue2"
+              (ngModelChange)="onChange($event)"
+              (nzOnAfterChange)="onAfterChange($event)"
+            ></nz-slider>
+          </tc-form-group>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<tc-alert [iconColor]="'#2fa7ff'" [beforeIcon]="'icofont-info-circle'">
+  More info about slider can be found <a href="https://ng.ant.design/components/slider/en">here</a>
+</tc-alert>
+
+
+

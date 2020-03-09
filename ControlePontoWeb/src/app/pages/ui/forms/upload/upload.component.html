@@ -1,0 +1,146 @@
+<tc-card [title]="'Basic upload'" class="mb-0" [tcShape]="'6px 6px 0 0'">
+  <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+    <button type="upload" tc-button [beforeIcon]="'icofont-upload'">Click to upload</button>
+  </nz-upload>
+</tc-card>
+
+<tc-card [tcBgColor]="'#f3f3f3'" [tcShape]="'0 0 6px 6px'">
+  <pre><code [highlight]="demoCode"></code></pre>
+</tc-card>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Files list'">
+          <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" [nzFileList]="fileList">
+            <button type="upload" tc-button [beforeIcon]="'icofont-upload'">Click to upload</button>
+          </nz-upload>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Upload directory'">
+          <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzDirectory>
+            <button type="upload" tc-button [beforeIcon]="'icofont-upload'">Upload directory</button>
+          </nz-upload>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Pictures with list styles'">
+          <tc-form-group>
+            <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture" [(nzFileList)]="imageList1">
+              <button type="upload"  class="mb-4" tc-button [beforeIcon]="'icofont-upload'">Upload</button>
+            </nz-upload>
+          </tc-form-group>
+
+          <tc-form-group class="mb-0">
+              <nz-upload
+                nzListType="picture"
+                class="upload-list-inline"
+                [(nzFileList)]="imageList2"
+                nzAction="https://jsonplaceholder.typicode.com/posts/"
+              >
+                <button type="upload" class="mb-4" tc-button [beforeIcon]="'icofont-upload'">Upload</button>
+              </nz-upload>
+          </tc-form-group>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-12">
+        <tc-card [title]="'Avatar upload'">
+          <nz-upload
+            class="avatar-uploader"
+            nzAction="https://jsonplaceholder.typicode.com/posts/"
+            nzName="avatar"
+            nzListType="picture-card"
+            [nzShowUploadList]="false"
+            [nzBeforeUpload]="beforeUpload"
+            (nzChange)="handleChange($event)"
+          >
+            <ng-container *ngIf="!avatarUrl">
+              <ng-container>
+                <i class="upload-icon icofont-plus" *ngIf="!loading"></i>
+                <span class="ant-upload-text" *ngIf="loading">Loading...</span>
+              </ng-container>
+              <div class="ant-upload-text">Upload</div>
+            </ng-container>
+            <img *ngIf="avatarUrl" [src]="avatarUrl" class="avatar" />
+          </nz-upload>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Pictures wall'">
+          <div class="clearfix">
+            <nz-upload
+              nzAction="https://jsonplaceholder.typicode.com/posts/"
+              nzListType="picture-card"
+              [(nzFileList)]="photoWallList"
+              [nzShowButton]="photoWallList.length < 3"
+              [nzShowUploadList]="showUploadList"
+            >
+              <i class="icofont-plus"></i>
+              <div class="ant-upload-text">Upload</div>
+            </nz-upload>
+            <nz-modal
+              [nzVisible]="previewVisible"
+              [nzContent]="modalContent"
+              [nzFooter]="null"
+              (nzOnCancel)="previewVisible = false"
+            >
+              <ng-template #modalContent>
+                <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+              </ng-template>
+            </nz-modal>
+          </div>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Drag and Drop'">
+          <nz-upload
+            nzType="drag"
+            class="m-0"
+            [nzMultiple]="true"
+            [nzLimit]="2"
+            nzAction="https://jsonplaceholder.typicode.com/posts/"
+            (nzChange)="handleChangeUpload($event)"
+          >
+            <p class="ant-upload-drag-icon">
+              <i class="icofont-inbox" [tcFontSize]="46" [tcColor]="'#2fa7ff'"></i>
+            </p>
+            <p class="ant-upload-text">Click or drag file to this area to upload</p>
+            <p class="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+            </p>
+          </nz-upload>
+        </tc-card>
+      </div>
+
+      <div class="col-12">
+        <tc-card [title]="'Upload manualy'">
+          <nz-upload [(nzFileList)]="uploadList" [nzBeforeUpload]="beforeUploadManually" class="mb-4 d-block">
+            <button tc-button>Select File</button>
+          </nz-upload>
+          <button
+            tc-button
+            (click)="handleUpload()"
+            [disabled]="uploadList.length == 0"
+          >
+            {{ uploading ? 'Uploading' : 'Start Upload' }}
+          </button>
+        </tc-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<tc-alert [iconColor]="'#2fa7ff'" [beforeIcon]="'icofont-info-circle'">
+  More info about upload component can be found <a href="https://ng.ant.design/components/upload/en">here</a>
+</tc-alert>

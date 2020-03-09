@@ -1,0 +1,28 @@
+@import '../../../../../assets/sass/variables';
+
+:host {
+  ::ng-deep {
+    .upload-list-inline {
+      .ant-upload-list-item {
+        float: left;
+        width: 200px;
+        margin-right: 8px;
+      }
+    }
+    .ant-upload-drag {
+      padding: 0 ($module-rem / 2) !important;
+    }
+  }
+  .avatar {
+    width: 128px;
+    height: 128px;
+  }
+  .upload-icon {
+    font-size: 32px;
+    color: #999;
+  }
+  .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+  }
+}
